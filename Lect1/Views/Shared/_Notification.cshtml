@@ -1,0 +1,16 @@
+﻿@if (TempData["Success"] != null)
+{
+    <script src="~/css/"></script>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script>
+        toastr["success"]("@TempData["Success"])
+    </script>
+}
+@if (TempData["Error"] != null)
+{
+    <script src="~/css/"></script>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <h2 class="alert alert-danger">
+        toastr["Error"]("@TempData["Error"])
+    </h2>
+}
